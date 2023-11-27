@@ -1,0 +1,12 @@
+---
+layout: layouts/default
+title: Running Notes
+---
+
+<h1>{{ title }}</h1>
+
+<ul class="posts">
+{%- for post in collections.post -%}
+    <li><a href="{{ post.url | url }}">  {{ post.data.created_date }} - {{ post.data.title }}</a></li>
+{%- endfor -%}
+</ul>
